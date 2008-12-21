@@ -18,13 +18,14 @@
   h2 { font-family: bitstream vera serif;
     font-size: x-large;
     font-weight: bold;
-    text-decoration: underline;
     }
 
   </style>
-<title>%(title)s</title>
+<title>%(title)s - AltWorld</title>
 </head>
 <body>
+
+<h1>%(title)s</h1>
 
 %(text)s
 

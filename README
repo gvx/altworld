@@ -1,0 +1,7 @@
+AltWorld README
+
+AltWorld is a semi-Wiki system: it produces HTML pages from a Wiki-like syntax.
+
+It is made for Python2.6. If you have an older version you can:
+1. Update Python
+2. Change some code to make it work.

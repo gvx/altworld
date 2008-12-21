@@ -48,7 +48,7 @@ def Wikify(text):
 def Make(filename, source, outputfile):
     WikiText = source.read()
     WikiText = Wikify(WikiText)
-    htmlText = TemplateText % {'text': WikiText, 'title': filename + ' - AltWorld'}
+    htmlText = TemplateText % {'text': WikiText, 'title': filename}
     outputfile.write(htmlText)
 
 def CompileFile(arg, dir, files):
@@ -58,7 +58,7 @@ def CompileFile(arg, dir, files):
             print 'compiling', os.path.join('src', file), 'to', os.path.join('out', file)+'.html'
             fin = open(os.path.join('src', file))
             fout = open(os.path.join('out', file+'.html'), 'w')
-            Make(file, fin, fout)
+            Make(file.replace('_', ' '), fin, fout)
         except:
             print 'error in compiling', os.path.join('src', file)
         finally:
